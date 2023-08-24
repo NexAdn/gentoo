@@ -60,7 +60,7 @@ src_configure() {
 
 	# --without-ftconf is not handled well, bug #322201
 	econf \
-		$(use ftconv && echo "--enable-ftconv --with-ftpath=/usr") \
+		$(use ftconv && echo "--enable-ftconv --with-ftpath=${EPREFIX}/usr") \
 		$(use nfpcapd && echo --enable-nfpcapd) \
 		$(use nfprofile && echo --enable-nfprofile) \
 		$(use nftrack && echo --enable-nftrack) \
