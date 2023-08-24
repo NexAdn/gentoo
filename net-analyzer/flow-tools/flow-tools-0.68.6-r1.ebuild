@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -51,7 +51,7 @@ src_configure() {
 		$(usex mysql --with-mysql '') \
 		$(usex postgres --with-postgresql=yes --with-postgresql=no) \
 		$(usex ssl --with-openssl '') \
-		--sysconfdir=/etc/flow-tools
+		--sysconfdir="${EPREFIX}/etc/flow-tools"
 }
 
 src_install() {
